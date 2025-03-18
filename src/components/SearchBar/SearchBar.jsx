@@ -6,7 +6,7 @@ export default function SearchBar({ onSearch }) {
   
   return (
       
-      <header>
+      <header className={css.header}>
         <Formik
         initialValues={{ topic: "" }}
           
@@ -20,14 +20,15 @@ export default function SearchBar({ onSearch }) {
           }}>
           
            <Form>
-    <Field
+          <Field
+            className={css.input}
       type="text"
       name="topic"
-      autoComplete="off"
+      autoComplete="off"  
       autoFocus
       placeholder="Search images and photos"
     />
-    <button type="submit">Search</button>
+          <button className={ css.btn}type="submit">Search</button>
           </Form>
           
         </Formik>
